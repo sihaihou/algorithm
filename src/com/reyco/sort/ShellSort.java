@@ -1,88 +1,56 @@
 package com.reyco.sort;
 
-//两部分有序,变量两边，谁小谁先放入
+//间隔==4
+//第一个
+//9, 6,11,3, 5, 12,8,7, 10, 15,14,4, 1 ,13,2  
+//1, 6,11,3, 5, 12,8,7, 9, 15,14,4, 10 ,13,2  
+//第二个
+//1, 6, 11,3,5, 12, 8,7,9, 15, 14,4,10 ,13, 2 
+//1, 6, 11,3,5, 12, 8,7,9, 13, 14,4,10 ,15, 2
+//第三个
+//1,6, 11, 3,5,12, 8, 7,9,13, 14, 4,10,15, 2
+//1,6, 2, 3,5,12, 8, 7,9,13, 11, 4,10,15, 14
+//第四个
+//1,6,2, 3, 5,12,8, 7, 9,13,11, 4, 10,15,14
+//1,6,2, 3, 5,12,8, 4, 9,13,11, 7, 10,15,14
 
-//1,4,6,7,10,  2,3,5,8,9
-//新数组第1个放进入的1,
-//新数组第2个放进入的2,
-//新数组第3个放进入的3,
-//新数组第4个放进入的4,
-//新数组第5个放进入的5,
-//新数组第6个放进入的6,
-//新数组第7个放进入的7,
-//新数组第8个放进入的8,
-//新数组第9个放进入的9,
-//新数组第10个放进入的10,
+//间隔==2
+//第一个
+//1,6,2,3,5,12,8,4,9,13,11,7,10,15,14
+//1,6,2,3,5,12,8,4,9,13,10,7,11,15,14
+//第二个
+//1,6,2,3,5,12,8,4,9,13,10,7,11,15,14
+//1,3,2,4,5,6,8,7,9,12,10,13,11,15,14
+
+//间隔==1
+//1,3,2,4,5,6,8,7,9,12,10,13,11,15,14
+//1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
 /**
- * 归并排序
+ * shell排序
  * @author reyco
  *
  */
-public class MergeSort {
+public class ShellSort {
 
 	public static void main(String[] args) {
-		int[] arr = {1,4,7,8,3,6,9};
-		sort(arr, 0, arr.length-1);
+		int[] arr = {9,6,11,3,5,12,8,7,10,15,14,4,1,13,2};
+		sort(arr);
 		print(arr);
 	}
-	public static void sort(int[] arr,int left,int right) {
-		if(left==right) {
-			return ;
+	public static void sort(int[] arr) {
+		int gapSize=4;
+		while(gapSize<=arr.length/3) {
+			gapSize = gapSize*3+1;
 		}
-		int mid = left + (right-left)/2;
-		sort(arr, left, mid);
-		sort(arr, mid+1, right);
-		merge(arr, left, mid+1, right);
-	}
-	/**
-	 *
-	 * {1,4,7,8,3,6,9}
-	 * 4,7,8,3,6
-	 * leftIndex = 1
-	 * rightIndex = 4
-	 * rightBoundIndex = 5;
-	 * @param arr
-	 * @param leftIndex
-	 * @param rightIndex
-	 * @param rightBoundIndex
-	 * @return
-	 */
-	private static void merge(int[] arr,int leftIndex,int rightIndex,int rightBoundIndex) {
-		int[] temp = new int[rightBoundIndex - leftIndex + 1];
-		int mid = rightIndex-1;
-		int i=leftIndex;
-		int j=rightIndex;
-		int index=0;
-		while(i<=mid && j<=rightBoundIndex) {
-			temp[index++] = arr[i]<=arr[j] ? arr[i++] : arr[j++];
+		for (int gap=gapSize;gap>0;gap=(gap-1)/3) {
+			for (int i=gap;i<arr.length;i++) {
+				for (int j=i;j>gap-1;j-=gap) {
+					if(arr[j]<arr[j-gap]) {
+						swap(arr, j, j-gap);
+					}
+				}
+			}
 		}
-		while(i<=mid) {
-			temp[index++] = arr[i++];
-		}
-		while(j<=rightBoundIndex) {
-			temp[index++] = arr[j++];
-		}
-		for (int m=0;m<temp.length;m++) {
-			arr[leftIndex+m] = temp[m];
-		}
-	}
-	private static int[] merge1(int[] arr) {
-		int[] temp = new int[arr.length];
-		int mid = arr.length/2;
-		int i=0;
-		int j=mid+1;
-		int index=0;
-		while(i<=mid && j<arr.length) {
-			temp[index++] = arr[i]<=arr[j] ? arr[i++] : arr[j++];
-		}
-		while(i<mid) {
-			temp[index++] = arr[i++];
-		}
-		while(j<arr.length) {
-			temp[index++] = arr[j++];
-		}
-		System.arraycopy(temp, 0, arr, 0, temp.length);
-		return arr;
 	}
 	/**
 	 * 打印数组
@@ -93,5 +61,16 @@ public class MergeSort {
 			System.out.print(arr[i]+" ");
 		}
 		System.out.println();
+	}
+	/**
+	 * 数组索引交换位置
+	 * @param arr
+	 * @param i
+	 * @param j
+	 */
+	private static void swap(int[] arr,int i,int j) {
+		int temp = arr[i];
+		arr[i]=arr[j];
+		arr[j]=temp;
 	}
 }
