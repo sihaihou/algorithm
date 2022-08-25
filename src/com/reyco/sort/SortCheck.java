@@ -28,10 +28,11 @@ public class SortCheck {
 			//BubbleSort.sort(customArr); //冒泡排序
 			//InsertSort.sort(customArr); //插入排序
 			//ShellSort.sort(customArr);  //shell排序
-			MergeSort.sort(customArr, 0, customArr.length-1); //归并排序
+			//MergeSort.sort(customArr, 0, customArr.length-1); //归并排序
 			//QuickSort.sort(customArr, 0, customArr.length-1); //快排
 			//CountSort.sort(customArr, 0, 999);
 			//RadixSort.sort(customArr, 3);
+			HeapSort.sort(customArr);
 			
 			long end2 = System.currentTimeMillis();
 			long time2 = end2-start2;
