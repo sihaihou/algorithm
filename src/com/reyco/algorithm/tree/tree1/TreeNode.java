@@ -1,4 +1,4 @@
-package com.reyco.algorithm.tree1;
+package com.reyco.algorithm.tree.tree1;
 
 public class TreeNode {
 	public int val;
