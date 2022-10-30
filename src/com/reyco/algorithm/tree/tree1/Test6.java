@@ -1,4 +1,4 @@
-package com.reyco.algorithm.tree1;
+package com.reyco.algorithm.tree.tree1;
 
 /**
  * 判断一棵二叉树是否是满二叉树
