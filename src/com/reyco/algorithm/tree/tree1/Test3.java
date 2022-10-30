@@ -2,6 +2,8 @@ package com.reyco.algorithm.tree.tree1;
 
 import java.util.Stack;
 
+import com.reyco.algorithm.tree.TreeNode;
+
 /**
  * 搜索二叉树(left>parent && parent<right)
  * 判断一棵二叉树是搜索二叉树
