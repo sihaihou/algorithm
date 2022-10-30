@@ -3,6 +3,8 @@ package com.reyco.algorithm.tree.tree1;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import com.reyco.algorithm.tree.TreeNode;
+
 /**
  * 只有叶子节点可以不是全的,如果一个叶子节点的只能在左边.
  * 如何判断一棵二叉树是完全二叉树
