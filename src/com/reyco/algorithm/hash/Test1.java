@@ -1,4 +1,4 @@
-package com.reyco.lgorithm.hash;
+package com.reyco.algorithm.hash;
 
 public class Test1 {
 	
