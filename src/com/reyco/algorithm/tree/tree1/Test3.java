@@ -1,4 +1,4 @@
-package com.reyco.algorithm.tree1;
+package com.reyco.algorithm.tree.tree1;
 
 import java.util.Stack;
 
