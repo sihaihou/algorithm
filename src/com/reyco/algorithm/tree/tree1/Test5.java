@@ -1,4 +1,4 @@
-package com.reyco.algorithm.tree1;
+package com.reyco.algorithm.tree.tree1;
 
 /**
  * 判断一个二叉树是否平衡二叉树
