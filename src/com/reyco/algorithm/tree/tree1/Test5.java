@@ -1,5 +1,7 @@
 package com.reyco.algorithm.tree.tree1;
 
+import com.reyco.algorithm.tree.TreeNode;
+
 /**
  * 判断一个二叉树是否平衡二叉树
  * 思路:
