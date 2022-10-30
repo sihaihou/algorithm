@@ -1,4 +1,7 @@
 union: 并查集
 trie：前缀树
 window：滑动窗口
+bit: 位运算
+cache： 缓存
+graph： 图
 
