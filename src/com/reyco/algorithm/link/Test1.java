@@ -5,7 +5,7 @@ package com.reyco.algorithm.link;
  * @author reyco
  *
  */
-public class Test01 {
+public class Test1 {
 	public static void main(String[] args) {
 		ListNode head = ListNodeFactory.createOrder(10);
 		forEach(head);
