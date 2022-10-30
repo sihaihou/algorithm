@@ -1,4 +1,4 @@
-package com.reyco.lgorithm.hash;
+package com.reyco.algorithm.hash;
 
 /**
  * 1,32位无符号整数范围是0~42,9496,7295；现在有一个正好包含40亿个无符号整数的文件;
