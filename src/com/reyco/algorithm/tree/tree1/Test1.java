@@ -2,6 +2,8 @@ package com.reyco.algorithm.tree.tree1;
 
 import java.util.Stack;
 
+import com.reyco.algorithm.tree.TreeNode;
+
 /**
  * 二叉树的前中后遍历
  * @author reyco
