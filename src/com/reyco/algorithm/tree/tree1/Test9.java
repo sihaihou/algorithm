@@ -1,4 +1,7 @@
 package com.reyco.algorithm.tree.tree1;
+
+import com.reyco.algorithm.tree.TreeNode;
+
 /**
  * 求二叉树的最大距离
  * @author reyco
