@@ -1,5 +1,7 @@
 package com.reyco.algorithm.tree.tree1;
 
+import com.reyco.algorithm.tree.TreeNode;
+
 /**
  * 后继节点
  * @author reyco
