@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import com.reyco.algorithm.tree.TreeNode;
+
 /**
  * 找到node1和node2在Tree中的最低公共祖先
  * 思路：先组装Tree中所有节点的父节点 
