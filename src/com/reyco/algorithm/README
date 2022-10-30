@@ -1,7 +1,8 @@
-union: 并查集
-trie：前缀树
-window：滑动窗口
-bit: 位运算
-cache： 缓存
-graph： 图
-hash: 哈希表
+1，union: 并查集
+2，trie：前缀树
+3，window：滑动窗口
+4，bit: 位运算
+5，cache： 缓存
+6，graph： 图
+7，hash: 哈希表
+8，sort: 排序
