@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
+import com.reyco.algorithm.tree.TreeNode;
+
 /**
  * 1.按照二叉树的宽度优先遍历
  * 2.求一棵二叉树的宽度
