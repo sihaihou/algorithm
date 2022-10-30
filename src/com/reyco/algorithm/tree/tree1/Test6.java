@@ -1,5 +1,7 @@
 package com.reyco.algorithm.tree.tree1;
 
+import com.reyco.algorithm.tree.TreeNode;
+
 /**
  * 判断一棵二叉树是否是满二叉树
  * @author reyco
