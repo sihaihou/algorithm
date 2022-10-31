@@ -8,6 +8,7 @@
 8，sort: 排序
 9, link: 链表
 10, tree: 二叉树
-11,matrix: 矩阵
-12,top: 排行榜
-13,orderedTable: 有序表
+11, matrix: 矩阵
+12, top: 排行榜
+13, gameTheory：博弈论
+14, orderedTable: 有序表
