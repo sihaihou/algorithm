@@ -1,4 +1,4 @@
-package com.reyco.lgorithm.bit;
+package com.reyco.algorithm.bit;
 /**
  * 一个正数数组，只有一种数出现了奇数次，其它数出现了偶数次,找出这个出现了奇数次的数？
  * 一个正数数组，只有两种数出现了奇数次，其它数出现了偶数次，找出这两个出现了奇数次的数？
