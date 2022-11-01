@@ -1,4 +1,4 @@
-最长子串、子数组问题： 以i结尾怎么怎么样？
+## 最长子串、子数组问题： 以i结尾怎么怎么样？
 
 #### 1,[给定两个字符串str1、str2,求str1和str2的最长公共子串;](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array1/Test1.java)
 #### 2,[返回这两个字符串的最长 公共子序列 的长度;](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array1/Test2.java)
