@@ -1,4 +1,4 @@
-package com.reyco.algorithm.bit.test1;
+package com.reyco.algorithm.bit;
 
 /**
  * 加减乘除
