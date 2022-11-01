@@ -1,4 +1,4 @@
-package com.reyco.algorithm.bit.test1;
+package com.reyco.algorithm.bit;
 
 /**
  * 二进制位出现1的次数
