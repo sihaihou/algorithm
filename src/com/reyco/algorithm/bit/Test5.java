@@ -1,4 +1,4 @@
-package com.reyco.algorithm.bit.test1;
+package com.reyco.algorithm.bit;
 
 /**
  * 判断一个数是不是2、4的幂次方
