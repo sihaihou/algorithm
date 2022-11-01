@@ -25,11 +25,11 @@
 	  
 ## Graph: 基础图的类
 ## Test： 给你一个图转换成我们的基础图类
-#### 1，[图宽度优先遍历](https://github.com/sihaihou/algorithm/edit/master/src/com/reyco/algorithm/graph/Test1.java)---用队列
-#### 2，[深宽度优先遍历](https://github.com/sihaihou/algorithm/edit/master/src/com/reyco/algorithm/graph/Test2.java)---用栈
-#### 3，[拓扑排序](https://github.com/sihaihou/algorithm/edit/master/src/com/reyco/algorithm/graph/Test3.java)---无环有向图
-#### 4，[Kruska算法](https://github.com/sihaihou/algorithm/edit/master/src/com/reyco/algorithm/graph/Test4.java)  ---生成最小生成数 ---->从最小边开始,只要不形成环--就是最小值
-#### 5，[prim算法](https://github.com/sihaihou/algorithm/edit/master/src/com/reyco/algorithm/graph/Test5.java)  ---生成最小生成树---->随便找一个点，如果没有连通，则解锁它所有的边，在解锁的边中选择最小边，并解锁最小边的to点的所有边，再在所有解锁的边中选择最小的边，一直这样下去;
-#### 6，[dijkstra算法](https://github.com/sihaihou/algorithm/edit/master/src/com/reyco/algorithm/graph/Test6.java)---求单元最小路径
-#### 7，[dijkstra优化算法](https://github.com/sihaihou/algorithm/edit/master/src/com/reyco/algorithm/graph/Test7.java)----小根堆改进后的dijkstra算法
-#### 8，[请返回长度为N的boolean型数组res，res[i]代表第i个加油站是不是良好出发点.](https://github.com/sihaihou/algorithm/edit/master/src/com/reyco/algorithm/graph/Test8.java)
+#### 1，[图宽度优先遍历](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test1.java)---用队列
+#### 2，[深宽度优先遍历](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test2.java)---用栈
+#### 3，[拓扑排序](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test3.java)---无环有向图
+#### 4，[Kruska算法](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test4.java)  ---生成最小生成数 ---->从最小边开始,只要不形成环--就是最小值
+#### 5，[prim算法](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test5.java)  ---生成最小生成树---->随便找一个点，如果没有连通，则解锁它所有的边，在解锁的边中选择最小边，并解锁最小边的to点的所有边，再在所有解锁的边中选择最小的边，一直这样下去;
+#### 6，[dijkstra算法](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test6.java)---求单元最小路径
+#### 7，[dijkstra优化算法](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test7.java)----小根堆改进后的dijkstra算法
+#### 8，[请返回长度为N的boolean型数组res，res[i]代表第i个加油站是不是良好出发点.](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test8.java)
