@@ -15,9 +15,9 @@
 #### 选择排序：&emsp;&emsp;          O(N^2)&emsp;&emsp;&emsp;&emsp;        O(1)&emsp;&emsp;&emsp;&emsp;        无
 #### 冒泡排序：&emsp;&emsp;          O(N^2)&emsp;&emsp;&emsp;&emsp;        O(1)&emsp;&emsp;&emsp;&emsp;      有
 #### 插入排序：&emsp;&emsp;          O(N^2)&emsp;&emsp;&emsp;&emsp;        O(1)&emsp;&emsp;&emsp;&emsp;       有
-#### 归并排序：&emsp;&emsp;          O(N*logN)&emsp;&emsp;&emsp;      O(N)&emsp;&emsp;&emsp;&emsp;       有
-#### 随机快排：&emsp;&emsp;          O(N*logN)&emsp;&emsp;&emsp;      O(logN)&emsp;&emsp;&emsp;&emsp;    无
-#### 堆  排序：&emsp;&emsp;&emsp;    O(N*logN)&emsp;&emsp;&emsp;      O(1)&emsp;&emsp;&emsp;&emsp;       无 
+#### 归并排序：&emsp;&emsp;          O(N*logN)&emsp;&emsp;      O(N)&emsp;&emsp;&emsp;&emsp;       有
+#### 随机快排：&emsp;&emsp;          O(N*logN)&emsp;&emsp;      O(logN)&emsp;&emsp;&emsp;&emsp;    无
+#### 堆  排序：&emsp;&emsp;&emsp;    O(N*logN)&emsp;&emsp;     O(1)&emsp;&emsp;&emsp;&emsp;       无 
 #### ----------------------------------
 #### 计数排序：&emsp;&emsp;          O(N)&emsp;&emsp;          O(N+k)&emsp;&emsp;     有 
 #### 基数排序：&emsp;&emsp;          O(N)&emsp;&emsp;          O(N)&emsp;&emsp;       有 
