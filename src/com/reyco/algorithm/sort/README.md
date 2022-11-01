@@ -8,7 +8,7 @@
 
 
 	            时间复杂度  空间复杂的     稳定
-[选择排序]：            O(N^2)      O(1)       无(https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort)
+选择排序：            O(N^2)      O(1)         无
 冒泡排序：            O(N^2)      O(1)         有
 插入排序：            O(N^2)      O(1)         有
 归并排序：            O(N*logN)   O(N)         有
