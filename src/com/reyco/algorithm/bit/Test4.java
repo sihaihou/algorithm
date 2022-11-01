@@ -1,4 +1,4 @@
-package com.reyco.algorithm.bit.test1;
+package com.reyco.algorithm.bit;
 
 /**
  * 两个有符号32位整数a和b,返回a和b中较大的。（要求：不能作任何判断）
