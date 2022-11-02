@@ -29,7 +29,10 @@ package com.reyco.algorithm.sort;
 //第4次
 //1,3,5,6,9
 /**
- * 插入排序
+ * 插入排序---------保证arr[0...i]上有序
+ * 时间复杂度： O(N²)
+ * 空间复杂度： O(1)
+ * 稳定性：     有
  * @author reyco
  *
  */
@@ -41,7 +44,9 @@ public class InsertSort {
 		print(arr);
 	}
 	public static void sort(int[] arr) {
+		//保证arr[0...i]上有序,所以i从1开始,j<=i
 		for (int i=1;i<arr.length;i++) {
+			//要保证j<=i
 			for (int j=i;j>0;j--) {
 				if(arr[j]<arr[j-1]) {
 					swap(arr, j, j-1);
