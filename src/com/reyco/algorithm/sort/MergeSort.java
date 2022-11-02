@@ -14,7 +14,10 @@ package com.reyco.algorithm.sort;
 //新数组第9个放进入的9,
 //新数组第10个放进入的10,
 /**
- * 归并排序
+ * 归并排序-------两部分有序,变量两边，谁小谁先放入
+ * 时间复杂度： O(N*logN)
+ * 空间复杂度： O(N)
+ * 稳定性：     有
  * @author reyco
  *
  */
@@ -37,10 +40,10 @@ public class MergeSort {
 	/**
 	 *
 	 * {1,4,7,8,3,6,9}
-	 * 4,7,8,3,6
-	 * leftIndex = 1
+	 * 1,4,7,8,3,6
+	 * leftIndex = 0
 	 * rightIndex = 4
-	 * rightBoundIndex = 5;
+	 * rightBoundIndex = 6;
 	 * @param arr
 	 * @param leftIndex
 	 * @param rightIndex
