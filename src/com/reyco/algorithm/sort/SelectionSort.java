@@ -33,7 +33,7 @@ package com.reyco.algorithm.sort;
  * 选择排序-----找到arr[i..arr.length]范围上的最小值放在前面来
  * 时间复杂度:  big O(N²)
  * 空间复杂度:  O(1)
- * 是否稳定:    没有
+ * 是否稳定:    无
  * @author reyco
  *
  */
