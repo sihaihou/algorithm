@@ -30,8 +30,10 @@ package com.reyco.algorithm.sort;
 //第14轮
 //1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
 /**
- * 选择排序
+ * 选择排序-----找到arr[i..arr.length]范围上的最小值放在前面来
  * 时间复杂度  big O(N²)
+ * 空间复杂度  O(1)
+ * 是否稳定    没有
  * @author reyco
  *
  */
@@ -43,17 +45,20 @@ public class SelectionSort {
 		print(arr);
 	}
 	public static void sort(int[] arr) {
-		for (int i=0;i<arr.length;i++) {
-			int min = i;
+		//要保证i后面至少有一个数，所以i<arr.length-1
+		for (int i=0;i<arr.length-1;i++) {
+			//找到arr[i..arr.length]的最小值
+			int minIndex = i;
 			boolean flag = true;
 			for (int j=i+1;j<arr.length;j++) {
-				if(arr[min]>arr[j]) {
-					min = j;
+				if(arr[minIndex]>arr[j]) {
+					minIndex = j;
 					flag=false;
 				}
 			}
+			//如果arr[i]不是最小值，i和minIndex交换
 			if(!flag) {
-				swap(arr, min, i);
+				swap(arr, minIndex, i);
 			}
 		}
 	}
