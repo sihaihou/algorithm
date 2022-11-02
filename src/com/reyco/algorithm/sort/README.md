@@ -1,9 +1,14 @@
-简单排序：[选择排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/SelectionSort.java)、[冒泡排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/BubbleSort.java)，[插入排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/InsertSort.java)
+#  排序算法
+### 简单排序：[选择排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/SelectionSort.java)、[冒泡排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/BubbleSort.java)，[插入排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/InsertSort.java)
+#### 选择排序： 找到arr[i..arr.length]范围上的最小值放在前面来。
+#### 冒泡排序： 相邻的两个数i和i+1交换，交换后i向后移一位。
+#### 插入排序： 保证arr[0...i]上有序。
 
-希尔排序：[shell排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/ShellSort.java)
-
-[归并排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/MergeSort.java)、[快速排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/QuickSort.java)
-
+### 高级排序：希尔排序：[shell排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/ShellSort.java)[归并排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/MergeSort.java)、[快速排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/QuickSort.java)
+### 高级排序：希尔排序(插入排序优化版)、归并排序、快速排序
+#### 希尔排序: 先分组,分组遍历有序；组的大小size=(size-1)/3,组的大小等于1排序后就整体有序了
+#### 归并排序: 两部分有序,变量两边，谁小谁先放入
+#### 快速排序: 先找到一个轴，小于轴的放左边，大于轴的放右边
 
 桶排序: [计数排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/CountSort.java)、[基数排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/RadixSort.java)
 
