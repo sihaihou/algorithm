@@ -66,8 +66,10 @@ package com.reyco.algorithm.sort;
 //第13轮
 //1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
 /**
- * 冒泡排序
- * 时间复杂度big O(N²)
+ * 冒泡排序-----------相邻的两个数i和i+1交换，交换后i往后移一位
+ * 时间复杂度: O(N²)
+ * 空间复杂度: O(1)  
+ * 稳定性:     有
  * @author reyco
  *
  */
@@ -79,8 +81,10 @@ public class BubbleSort {
 		print(arr);
 	}
 	public static void sort(int[] arr) {
+		//i要保证后面至少有一个数i<arr.length-1
 		for (int i=0;i<arr.length-1;i++) {
 			boolean flag=true;
+			//j和j+1交换,所以j后面必须保证有数
 			for (int j=0;j<arr.length-1-i;j++) {
 				if(arr[j]>arr[j+1]) {
 					swap(arr, j, j+1);
