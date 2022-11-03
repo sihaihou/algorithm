@@ -1,7 +1,7 @@
 package com.reyco.algorithm.sort;
 
 /**
- * 计数排序
+ * 计数排序------先生成count数组，再生成累加和数组，最后倒着遍历原数组的每一个数在什么位置。
  * @author reyco
  */
 public class CountSort {
