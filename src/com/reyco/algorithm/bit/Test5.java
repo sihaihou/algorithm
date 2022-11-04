@@ -50,7 +50,7 @@ public class Test5 {
 		return true;
 	}
 	/**
-	 * 2的幂次方
+	 * 4的幂次方
 	 * @param num
 	 * @return
 	 */
