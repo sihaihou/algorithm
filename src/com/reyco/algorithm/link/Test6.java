@@ -3,7 +3,7 @@ package com.reyco.algorithm.link;
 /**
  * 判断链表是否回文结构
  * 答：
- *  1）快慢指针先找到下中节点;
+ * 	1）快慢指针先找到下中节点;
  *  2）然后反转后半部分链表结构；
  *  3）双指针从头和下中节点遍历是否相等,只要有一个不等，否回文链表；否则是回文链表。
  *  4）恢复反转后的后半部分链表结构。
@@ -12,12 +12,15 @@ package com.reyco.algorithm.link;
  */
 public class Test6 {
 	public static void main(String[] args) {
-		//ListNode head = ListNodeFactory.createPalindrome(5);
-		ListNode head = ListNodeFactory.createRandomFixedLength(10);
+		ListNode head = ListNodeFactory.createPalindrome(5);
+		//ListNode head = ListNodeFactory.createRandomFixedLength(10);
 		System.out.print("判断回文前：");
 		ListNodeUtils.forEach(head);
+		
+		System.out.println();
 		boolean palindrome = isPalindrome(head);
 		System.out.println();
+		
 		System.out.print("判断回文后：");
 		ListNodeUtils.forEach(head);
 		System.out.println();
@@ -49,6 +52,8 @@ public class Test6 {
 			pre = curr;
 			curr = next;
 		}
+		System.out.print("反转的链表：");
+		ListNodeUtils.forEach(pre);
 		//双指针从头和下中节点遍历是否相等,只要有一个不等，否回文链表；否则是回文链表。
 		boolean flag = true;
 		ListNode curr1 = pre;
