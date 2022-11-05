@@ -37,6 +37,7 @@ public class Test5 {
 		int x2=matrix.length-1;
 		int y2=matrix[0].length-1;
 		while(x1<x2) {
+			//左上往右下移动，右下往左上移动
 			rotate(matrix, x1++, y1++, x2--, y2--);
 		}
 	}
