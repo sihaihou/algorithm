@@ -15,6 +15,11 @@ package com.reyco.algorithm.matrix;
  * 		{7, 14, 13, 2}
  * 		{6,  5,  4, 3}
  *  }
+ *  答：每一圈分y2-y1组，四个位置互相交互
+ *  	第i组的第1个位置：matrix[x1][y1+i];
+ *  	第i组的第2个位置：matrix[x1+i][y2];
+ *  	第i组的第3个位置：matrix[x2][y2-i];
+ *  	第i组的第4个位置：matrix[x2-i][y1];
  * @author reyco
  *
  */
