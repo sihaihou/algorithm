@@ -8,6 +8,8 @@ package com.reyco.algorithm.matrix;
  * 		{9,  8,  7,  5}
  *  }
  *  打印：0 1 10 9 11 2 3 12 8 7 4 5
+ *  答：刚开始A,B两个点都停在[0,0]位置,A就一直往右走，走到不能往右走了，就往下走;B就一直往下走，走到不能往下走了，就往右走；每次A、B都只走一步。
+ *     定义一个boolean类型的变量upToDown（是否从上往下走），每轮后upToDown取反。
  * @author reyco
  *
  */
