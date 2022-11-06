@@ -7,6 +7,17 @@ import java.util.Random;
 /**
  * 排行榜记录---前k条记录
  * TopRecord
+ * 答：词频组织的小根堆：堆顶是门槛，只要出现的词频大于堆顶的词频，就把堆顶的替换掉并调整小根堆
+ * 	      属性1: Map<String,Node> wordMap：某个字符串是否在存在（key:字符串,value:字符串的节点）；
+ *    属性2: Map<Node,Integer> indexMap：每个字符串节点在堆上的索引位置;
+ *    属性3： Node[] heap： 堆数组,索引0位置无效；
+ *    属性4： heapSize：当前堆数组中有几个节点
+ *    
+ *    流程：添加一个字符串，看wordMap是否存在
+ *    		情况1：如果不存在，则创建好放入wordMap中并在indexMap放入，索引为-1，无效;
+ *          情况2：如果存在，词频加1,看堆是否已满：
+ *               如果没有满，直接放入堆中heapSize位置并调整小根堆；
+ *               如果满了，看当前的词频是否大于堆顶词频，如果大于，放在堆顶并调整小根堆
  * @author reyco
  *
  */
@@ -15,8 +26,8 @@ public class Test1 {
 	public static void main(String[] args) {
 		Random random = new Random();
 		TopRecord topRecord = new TopRecord(3);
-		//String s = "abcdefghijklmnopqrstwvuxyz";
-		String s = "abc";
+		String s = "abcdefghijklmnopqrstwvuxyz";
+		//String s = "abc";
 		for(int i=0;i<100;i++) {
 			String word = s.charAt(random.nextInt(s.length()))+"";
 			//System.out.println(word);
@@ -67,7 +78,7 @@ public class Test1 {
 				preIndex = indexMap.get(currNode);
 			}
 			if(preIndex==-1) {
-				if(heapSize==heap.length+1) {
+				if(heapSize==heap.length) {
 					if(currNode.times>heap[1].times) {
 						indexMap.put(heap[1], -1);
 						indexMap.put(currNode, 1);
