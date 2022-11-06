@@ -3,7 +3,7 @@
 ## 1，有序表: 
 #### &emsp;&emsp;红黑树、AVL树(平衡二叉搜索树：balanced binary Tree)、SB树(Size Balance Tree)、跳表(SkipList)
 
-## 2，平衡二次搜索树：
+## 2，平衡二叉搜索树：
 #### &emsp;&emsp;  1),查询：大于target往左树遍历，小于target往右树遍历；
 #### &emsp;&emsp;  2),增加：
 ##### &emsp;&emsp;&emsp;&emsp; (1)根节点等于空,新建节点赋值给root;
