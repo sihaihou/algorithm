@@ -66,7 +66,10 @@ public class Test1 {
 		}
 	}
 	/**
-	 * 先序
+	 * 先序：
+	 * 	  第一步：每次弹出一个节点curr
+	 * 	  第二步：打印curr,
+	 * 	  第二步：先压右再压左；继续第一步，周而复始。
 	 * @param node
 	 * @return
 	 */
@@ -75,13 +78,13 @@ public class Test1 {
 			Stack<TreeNode> stock = new Stack<>();
 			stock.push(tree);
 			while(!stock.isEmpty()) {
-				TreeNode t = stock.pop();
-				System.out.print(t.val+" ");
-				if(t.right!=null) {
-					stock.push(t.right);
+				TreeNode curr = stock.pop();
+				System.out.print(curr.val+" ");
+				if(curr.right!=null) {
+					stock.push(curr.right);
 				}
-				if(t.left!=null) {
-					stock.push(t.left);
+				if(curr.left!=null) {
+					stock.push(curr.left);
 				}
 			}
 		}
@@ -104,7 +107,10 @@ public class Test1 {
 		}
 	}
 	/**
-	 * 中序
+	 * 中序：---左右头
+	 *     第一步：每棵子树，左边界进栈，
+	 *     第二步：依次弹出打印，
+	 *     第三步：对弹出节点右树进行第一步操作，周而复始。
 	 * @param tree
 	 * @return
 	 */
@@ -141,7 +147,11 @@ public class Test1 {
 		System.out.print(tree.val+" ");
 	}
 	/**
-	 * 后序
+	 * 后序：头右左---逆序--->左右头
+	 *     第一步：弹出curr，
+	 *     第二步：放入收集栈中；
+	 *     第三步：先压左再压右；继续第一步，周而复始。
+	 *     最后：统一从收集栈弹出打印。
 	 * @param tree
 	 * @return
 	 */
