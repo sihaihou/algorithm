@@ -9,4 +9,3 @@
 #### 7，[矩形重叠问题](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/matrix/Test7.java)
 #### 8，[大楼重叠问题](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/matrix/Test8.java)
 #### 9，[返回子矩阵的最大累加和。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/matrix/Test9.java)
-#### 10，[有一片1连接在一起就是一个岛屿，求一个矩阵右多少个岛屿？](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/matrix/Test10.java)
