@@ -4,7 +4,7 @@
 #### 3，[形成多少种不同的二叉树结构](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/tree/tree2/Test3.java)
 #### 4，[所有路径中，权值和最大的值为多少](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/tree/tree2/Test4.java)
 #### 5，[搜索二叉树转双向链表](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/tree/tree2/Test5.java)
-#### 6，[已知一棵二叉树中没有重复节点，滨崎给定了这棵树的先序遍历数组和中序遍历数组，返回后续遍历数组。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/tree/tree2/Test6.java)
+#### 6，[已知一棵二叉树中没有重复节点，已知给定了这棵树的先序遍历数组和中序遍历数组，返回后续遍历数组。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/tree/tree2/Test6.java)
 #### 7，[求完全二叉树的节点个数。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/tree/tree2/Test7.java)
 #### 8，[给定一棵二叉树的头节点head，已知所有节点的值都不一样，返回其中最大的且符合搜索二叉树条件的最大拓扑结构的大小。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/tree/tree2/Test8.java)
 #### 9，[一棵二叉树原本是搜索二叉树，但是其中有两个节点调换了位置，使得这棵二叉树不再是搜索二叉树，请找出这个两个错误的节点并返回。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/tree/tree2/Test9.java)
