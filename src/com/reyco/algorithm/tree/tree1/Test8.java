@@ -1,9 +1,11 @@
 package com.reyco.algorithm.tree.tree1;
 
-import com.reyco.algorithm.tree.TreeNode;
-
 /**
- * 后继节点
+ * 后继节点---中序遍历中的下一个节点
+ * 答：
+ * 	   情况1）如果X有右树时，X的后继节点是右树的最左节点
+ *   情况2）如果X没有右树时，我是我父节点的左孩子，这个父节点就是X的后继节点，
+ *   情况3）最右的节点没有后继节点
  * @author reyco
  *
  */
