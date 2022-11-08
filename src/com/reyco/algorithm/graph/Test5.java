@@ -34,10 +34,10 @@ public class Test5 {
 		//选择的边
 		Set<Edge> result = new HashSet<>();
 		
-		graph.nodes.values().stream().forEach(node->{
+		graph.nodes.values().stream().forEach(node->{   //随便找一个点
 			if(!nodeSet.contains(node)) {
 				nodeSet.add(node);
-				node.edges.stream().forEach(edge->{
+				node.edges.stream().forEach(edge->{	//由一个点，解锁所有相连的边
 					if(!edgeSet.contains(edge)) {
 						edgeSet.add(edge);
 						priorityQueue.add(edge);
@@ -45,13 +45,13 @@ public class Test5 {
 				});
 				while(!priorityQueue.isEmpty()) {
 					//pop最小的边
-					Edge edge = priorityQueue.poll();
+					Edge edge = priorityQueue.poll();  //弹出解锁的最小边
 					Node to = edge.to;
-					if(!nodeSet.contains(to)) {
+					if(!nodeSet.contains(to)) {        //被解锁的点是否已选择过
 						nodeSet.add(to);
 						result.add(edge);
 						for (Edge nextEdge : to.edges) {
-							if(!edgeSet.contains(nextEdge)) {
+							if(!edgeSet.contains(nextEdge)) {	//被解锁的边是否放入过小根堆
 								edgeSet.add(nextEdge);
 								priorityQueue.add(nextEdge);
 							}
