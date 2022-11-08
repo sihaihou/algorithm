@@ -26,7 +26,7 @@ public class Test6 {
 	}
 	public static boolean isFullTree(TreeNode tree) {
 		Response response = getResponse(tree);
-		return response.nodes == response.height*2+1;
+		return response.nodes == (1<<response.height)+1;
 	}
 	private static Response getResponse(TreeNode tree) {
 		if(tree==null) {
