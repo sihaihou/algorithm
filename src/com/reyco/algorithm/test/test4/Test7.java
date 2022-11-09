@@ -3,6 +3,7 @@ package com.reyco.algorithm.test.test4;
 import com.reyco.algorithm.test.test3.RandomArrayFactory;
 
 /**
+ * 46
  * 给定正整数数组arr，arr[i]代表货币金额，arr[i]可以使用任意张，求搞定target钱有多少种方法？
  * @author reyco
  *
