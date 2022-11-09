@@ -1,6 +1,7 @@
 package com.reyco.algorithm.test.test5;
 
 /**
+ * 中-3
  * 规定1和A对应，2和B对应、3和C对应...
  * 那么一个数字字符串比如111就可以转化为AAA、AK、KA，
  * 给定一个只有数字组成的字符串str,返回有多少种转化结果？
