@@ -1,6 +1,7 @@
 package com.reyco.algorithm.cache;
 
 /**
+ * 高-9
  * LFU:淘汰使用次数最少的key，如果最少使用次数的key很多，先淘汰时间节点早的key
  * 要求get/add时间复杂度O(1)
  * 答：map+二维双向链表：Map<Key,LinkedNode>
