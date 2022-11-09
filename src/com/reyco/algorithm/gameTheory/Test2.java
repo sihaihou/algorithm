@@ -1,6 +1,7 @@
 package com.reyco.algorithm.gameTheory;
 
 /**
+ * 中-1
  * 有一堆草，羊每次只能吃4的n次方份，谁最后吃完剩下的草，谁赢。
  * @author reyco
  *
