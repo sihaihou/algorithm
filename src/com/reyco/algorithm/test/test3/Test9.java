@@ -1,6 +1,7 @@
 package com.reyco.algorithm.test.test3;
 
 /**
+ * 56
  * 给定一个只有0、1、&、|、^ 五种字符组成的字符串express，再给定一个布尔值desired。返回express有多少种组合方式，可以达到desired的结果。
  * 如：
  * 	express = "1^0|0|1",desired=false,只有“1^((0|0)|1)”和"1^(0|(0|1))"的组合可以得到false，返回2.
