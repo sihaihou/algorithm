@@ -3,6 +3,7 @@ package com.reyco.algorithm.gameTheory;
 import com.reyco.lgorithm.recursion1.RandomArrayFactory;
 
 /**
+ * 46
  * 给定一个整数数组arr，代表数值不同的纸牌排成一条线,玩家A和B依次拿走每张牌，
  * 规定玩家A先拿，玩家B后拿，但是每个玩家只能拿走最左或最右的牌，
  * 玩家A和B都绝顶聪明，请返回最后获胜者的分数。
