@@ -1,6 +1,7 @@
 package com.reyco.lgorithm.string.array1;
 
 /**
+ * 61
  * 正数数组arr,求数组中所有元素相加和等于k的最长子数组长度。
  * @author reyco
  *
