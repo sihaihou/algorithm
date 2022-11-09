@@ -1,6 +1,7 @@
 package com.reyco.algorithm.test.test3;
 
 /**
+ * 46
  * 在9*10的中国象棋棋盘中马从(0,0)跳K步到达M(x,y)有多少种方法？
  * @author reyco
  *
