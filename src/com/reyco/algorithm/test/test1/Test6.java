@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.TreeMap;
 
 /**
+ * 53
  * 给定一个job类型的数组jobar，表示所有的工作，给定一个int类型的数组arr,表示所有小伙伴的能力，在难度不超过自身能力的情况下，返回所有小伙伴获得的最高劳动报酬（int数组类型）。
  * @author reyco
  *
