@@ -1,6 +1,7 @@
 package com.reyco.algorithm.test.test1;
 
 /**
+ * 55
  * 给你一个数，返回以中文方式输出。
  * @author reyco
  *
