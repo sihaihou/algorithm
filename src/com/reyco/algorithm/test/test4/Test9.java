@@ -1,6 +1,7 @@
 package com.reyco.algorithm.test.test4;
 
 /**
+ * 64
  *	给你一个数num,返回可以有多少种裂开方法
  *	1   （1）
  *  2 （1 1） （2）  
