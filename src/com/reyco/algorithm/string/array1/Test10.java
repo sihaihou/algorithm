@@ -1,6 +1,7 @@
 package com.reyco.lgorithm.string.array1;
 
 /**
+ * 65
  * 返回数组arr中的子数组最大异或和。
  * 答：
  * @author reyco
