@@ -1,6 +1,7 @@
 package com.reyco.lgorithm.string.array1;
 
 /**
+ * 63
  * 给定一个字符串str，返回把str全部切成回文子串的最小分割数。
  *  例:1）str="aba" 本身是回文，不需要切割，返回1；
  *    2）str="ACDCDCDAD",最少需要切两次变成回文子串，A、CDCDC、DAD，所有返回3.
