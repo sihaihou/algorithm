@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 56、57
  * 给定一个整数数据arr,长度为n，有1<=arr[i]<=n,其中部分整数会重复出现而部分不会重复出现。找出所有未出现的数。
  * 答： 位置怼的方法
  * @author reyco
