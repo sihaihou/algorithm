@@ -1,6 +1,7 @@
 package com.reyco.algorithm.test.test2;
 
 /**
+ * 58
  * 给定一个整数数组arr,求如果排序之后，相邻两数的最大差值，要求时间复杂的O(N),且要求不能使用非基于比较的排序。
  * @author reyco
  *
