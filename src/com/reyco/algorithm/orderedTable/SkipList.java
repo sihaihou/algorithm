@@ -3,6 +3,7 @@ package com.reyco.algorithm.orderedTable;
 import java.util.ArrayList;
 
 /**
+ * 47,61
  * 跳表
  * 
  * @author reyco
