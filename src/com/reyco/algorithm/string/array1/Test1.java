@@ -1,9 +1,10 @@
-package com.reyco.lgorithm.string.array1;
+package com.reyco.algorithm.string.array1;
 
 /**
+ * 62
  * 给定两个字符串str1、str2,求str1和str2的最长公共子串。
- * 答:方法1： 必须以str1[i]和str2[j]结尾，它只依赖左上角的值+1: dp[i-1][j-1]+1
- *   方法2：
+ * 答: str1必须以i结尾,str2必须以j结尾情况下，最长公共子串有多长。它只依赖左上角的值+1, dp[i-1][j-1]+1
+ * 		str1[i]==str2[j]，len=dp[i-1][j-1]+1;str1[i]==str2[j],len=0。
  * @author reyco
  *
  */
@@ -22,10 +23,10 @@ public class Test1 {
 	 * @return
 	 */
 	public static String maxLenth(String str1,String str2) {
-		int row = 0;
-		int col = str2.length()-1;
-		int max = 0;
-		int end = 0;
+		int row = 0;//斜线开始位置的行
+		int col = str2.length()-1;//斜线开始位置的列
+		int max = 0;//全局最大的公共子串长度
+		int end = 0;//
 		while(row < str1.length()) {
 			int i = row;
 			int j = col;
