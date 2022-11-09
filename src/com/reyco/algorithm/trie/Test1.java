@@ -3,6 +3,7 @@ package com.reyco.algorithm.trie;
 import java.util.TreeMap;
 
 /**
+ * 54
  * 给定一个字符串类型的数组arr，String[] arr = {"b\\cst","d\\","a\\d\\e","a\\b\\c"};
  * 把这些路径蕴含的目录结构绘画出来，子目录直接列在父目录下面,并比父目录向右进两格，同一级别的需按字母顺序排列，不能乱。就像这样：
  * 	 a
