@@ -1,6 +1,7 @@
 package com.reyco.lgorithm.string.array2;
 
 /**
+ * 56
  * 在s字符串中，每个字母都要保留一个，让最后的结果字典序最小，并返回。
  * @author reyco
  *
