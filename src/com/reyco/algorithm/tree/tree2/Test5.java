@@ -3,6 +3,7 @@ package com.reyco.algorithm.tree.tree2;
 import com.reyco.algorithm.tree.TreeNode;
 
 /**
+ * 54
  * 搜索二叉树转双向链表
  * 答：左树的last连向头节点的first，头节点的first连向左节点last;右树的first连向头节点的last，头节点的last连向右节点first;
  * @author reyco
