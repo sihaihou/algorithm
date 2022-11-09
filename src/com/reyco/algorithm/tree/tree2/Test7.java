@@ -3,6 +3,7 @@ package com.reyco.algorithm.tree.tree2;
 import com.reyco.algorithm.tree.TreeNode;
 
 /**
+ * 55
  * 求完全二叉树的节点个数。
  * @author reyco
  *
@@ -48,8 +49,10 @@ public class Test7 {
 			return 1;
 		}
 		if(level(root.right, level+1)==height) {
+			//左树和当前节点个数  + 右树节点个数
 			return (1<<(height-level)) + f(root.right, level+1, height);
 		}else {
+			//右树和当前节点个数 + 左树节点个数
 			return (1<<(height-level-1)) + f(root.left, level+1, height);
 		}
 	}
