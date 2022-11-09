@@ -8,7 +8,7 @@ import java.util.TreeMap;
 import java.util.Map.Entry;
 
 /**
- * 
+ * 高-4
  * 给定一个N*3的矩阵matrix，对于每一个长度为3的小数组arr,都表示一个大楼的三个数据,arr[0]表示大楼的左边界，arr[1]表示大楼的右边界，arr[2]表示大楼的高度；
  * 每座大楼的地基都在X轴上，大楼之间可能会有重叠，请返回整理的轮廓线数据？
  * 答：例：{
