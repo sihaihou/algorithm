@@ -1,6 +1,7 @@
 package com.reyco.algorithm.test.test2;
 
 /**
+ * 52
  * 给定一个数组arr，如果通过调整可以做到任意两个相邻的数字相乘是4的倍数，返回true,否则返回false.
  * 答：
  * 1: 只是2的倍数==0,   
