@@ -1,6 +1,7 @@
 package com.reyco.lgorithm.string.array1;
 
 /**
+ * 66
  * 给定字符串str1和str2，求str1的子串中包含str2所有字符的最小子串长度。
  * 例：
  * 	 str1="abcde" str2="ac" 'abc'包含str2的所有字符，长度3.
