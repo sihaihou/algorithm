@@ -1,6 +1,7 @@
 package com.reyco.algorithm.test.test4;
 
 /**
+ * 62
  * 给定一个二维矩阵matrix，小Q操纵蛇从最左侧出发，每次只能向右上、右、右下走一步，即可获得该位置上的数值，任何情况达到负值就停止，蛇有一次改变节点值变成相反数。
  * 问小Q的蛇最长是多少？
  * @author reyco
