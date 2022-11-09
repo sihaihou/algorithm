@@ -6,6 +6,7 @@ import java.util.Random;
 import java.util.Set;
 
 /**
+ * 48
  * 给你两个整数元素的集合a、b,从一个集合中取出一个数放入另外一个集合中，使两个集合的平均数都增加，我们定义这个操作为magic。
  * 问最多可以进行多少种magic操作？
  * @author reyco
