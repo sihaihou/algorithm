@@ -6,7 +6,7 @@ package com.reyco.lgorithm.string.array1;
  * 例：
  * 	 str1="abcde" str2="ac" 'abc'包含str2的所有字符，长度3.
  * 	 str1="12345" str2="344" 最小包含子串不存在，长度0
- * 答：从左到右，滑动窗口+词频
+ * 答：从左到右，滑动窗口 + 词频 + 总的欠的字符数 
  * @author reyco
  *
  */
