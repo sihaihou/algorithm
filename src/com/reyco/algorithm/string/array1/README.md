@@ -6,7 +6,7 @@
 #### 4,[正数数组arr,求数组中所有元素相加和等于k的最长子数组长度。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array1/Test4.java)
 #### 5,[数组arr,有正、有负、有零,求数组中所有元素相加和小于或等于k的最长子数组长度。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array1/Test5.java)
 #### 6,[找到其中最长严格递增子序列的长度。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array1/Test6.java)
-#### 7,[无重复最长字串](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array1/Test7.java)
+#### 7,[无重复最长子串](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array1/Test7.java)
 #### 8,[给定一个字符串str，返回最长的回文子序列。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array1/Test8.java)
 #### 9,[给定一个字符串str，返回把str全部切成回文子串的最小分割数。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array1/Test9.java)
 #### 10,[返回数组arr中的子数组最大异或和。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array1/Test10.java)
