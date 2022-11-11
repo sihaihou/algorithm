@@ -1,7 +1,7 @@
 package com.reyco.lgorithm.string.array1;
 
 /**
- * 无重复最长字串
+ * 无重复最长子串
  * 最长子串、子数组问题： 以i结尾怎么怎么样？
  * @author reyco
  *
