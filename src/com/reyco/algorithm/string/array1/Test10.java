@@ -1,124 +1,101 @@
-package com.reyco.lgorithm.string.array1;
+package com.reyco.algorithm.string.array1;
 
 /**
- * 65
- * 返回数组arr中的子数组最大异或和。
- * 答：
+ * 63
+ * 给定一个字符串str，返回把str全部切成回文子串的最小分割数。
+ *  例:1）str="aba" 本身是回文，不需要切割，返回1；
+ *    2）str="ACDCDCDAD",最少需要切两次变成回文子串，A、CDCDC、DAD，所有返回3.
+ * 答：从左到右的尝试模型，
+ *    先生成Boolean类型的数组record，record[i...j]表示str[i...j]范围上是否回文。
  * @author reyco
  *
  */
 public class Test10 {
 	
 	public static void main(String[] args) {
-		int[] arr = {9,6,11,3,5,12,8,7,10,15,14,4,1,13,2};
-		if(maxEor1(arr)!=maxEor2(arr) 
-				|| maxEor1(arr)!=maxEor3(arr)) {
-			System.out.println("fail");
-		}else {
-			System.out.println("success");
-		}
-	}
-	
-	/**
-	 * 方法3：前缀树
-	 * @param arr
-	 * @return
-	 */
-	public static int maxEor3(int[] arr) {
-		if(arr==null || arr.length==0) {
-			return 0;
-		}
-		int ans = 0;
-		int sum = 0;
-		NumTrie numTrie = new NumTrie();
-		numTrie.add(0);
-		for (int i = 0; i < arr.length; i++) {
-			sum ^= arr[i];
-			ans = Math.max(ans, numTrie.maxXor(sum));
-			numTrie.add(sum);
-		}
-		return ans;
-	}
-	public static class Node{
-		public Node[] nexts = new Node[2];
-	}
-	public static class NumTrie{
-		public Node head = new Node();
-		/**
-		 * 
-		 * @param num
-		 */
-		public void add(int num) {
-			Node cur = head;
-			for (int move = 31; move >= 0; move--) {
-				int path = (num>>move)&1;
-				cur.nexts[path] = cur.nexts[path]==null ? new Node() : cur.nexts[path];
-				cur = cur.nexts[path];
-			}
-		}
-
-		public int maxXor(int sum) {
-			Node cur = head;
-			int res = 0;
-			for(int move=31;move>=0;move--) {
-				int path = (sum>>move)&1;
-				int best = move==31 ? path : path^1;
-				best = cur.nexts[best]!=null ? best : (best^1);
-				res |= (path^best)<<move;
-				cur = cur.nexts[best];
-			}
-			return res;
-		}
-		
+		//String str = "ABA";
+		//String str = "ACDCDCDAD"; //3
+		String str = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB"; //3
+		int strCut = minCut1(str);
+		System.out.println(strCut);
 	}
 	/**
-	 * 方法2：时间复杂度： O(n^2)
-	 * 尝试必须以arr[i]为结尾的子数组，最大异或和是多少,尝试所有的arr[i].
-	 * @param arr
+	 * 方法2：O(N^2)
+	 * @param str
 	 * @return
 	 */
-	public static int maxEor2(int[] arr) {
-		if(arr==null || arr.length==0) {
+	public static int minCut1(String str) {
+		if(str==null) {
 			return 0;
 		}
-		int[] pre0ToIEor = new int[arr.length];
-		pre0ToIEor[0] = arr[0];
-		for (int i = 1; i < arr.length; i++) {
-			pre0ToIEor[i] = pre0ToIEor[i-1]^arr[i]; 
+		if(str.length()==1) {
+			return 1;
 		}
-		int ans = 0;
-		for (int i = 0; i < arr.length; i++) {
-			//必须以arr[i]结尾，0...i每一个开头
-			for (int start = 0; start <= i; start++) {
-				int sum = pre0ToIEor[i]^(start-1==-1 ? 0 : pre0ToIEor[start-1]);
-				ans = Math.max(ans, sum);
-			}
-		}
-		return ans;
-	}
-	/**
-	 * 方法1：时间复杂度： O(n^3)
-	 * 尝试必须以arr[i]为结尾的子数组，最大异或和是多少,尝试所有的arr[i].
-	 * @param arr
-	 * @return
-	 */
-	public static int maxEor1(int[] arr) {
-		if(arr==null || arr.length==0) {
-			return 0;
-		}
-		int ans = 0;
-		for (int i = 0; i < arr.length; i++) {
-			//必须以arr[i]结尾，0...i每一个开头
-			for (int start = 0; start <= i; start++) {
-				int sum = 0;
-				for (int index = start; index < i; index++) {
-					sum ^= arr[index]; 
+		boolean[][] record = record(str);
+		int[] dp = new int[str.length()+1];
+		dp[str.length()] = 0;
+		dp[str.length()-1] = 1;
+		for (int i = str.length()-2; i >=0; i--) {
+			dp[i] = str.length()-i;
+			for (int j = i; j < str.length(); j++) {
+				if(record[i][j]) {
+					dp[i] = Math.min(dp[i], dp[j+1]+1);
 				}
-				ans = Math.max(ans, sum);
 			}
 		}
-		return ans;
+		return dp[0];
+	}
+	private static boolean[][] record(String str){
+		boolean[][] record = new boolean[str.length()][str.length()];
+		record[str.length()-1][str.length()-1] = true;
+		for (int i = 0; i < record.length-1; i++) {
+			record[i][i]=true;
+			record[i][i+1] = str.charAt(i)==str.charAt(i+1);
+		}
+		for (int row = str.length()-3; row>=0; row--) {
+			for (int col = row+2; col < str.length(); col++) {
+				record[row][col] = str.charAt(row)==str.charAt(col) && record[row+1][col-1];
+			}
+		}
+		return record;
 	}
 	
+	
+	/**
+	 * 方法1遍历：O(N^3)
+	 * @param str
+	 * @return
+	 */
+	public static int minCut(String str) {
+		if(str==null) {
+			return 0;
+		}
+		if(str.length()==1) {
+			return 1;
+		}
+		return process(str, 0);
+	}
+	private static int process(String str,int i) {
+		if(i==str.length()) {
+			return 0;
+		}
+		int min = Integer.MAX_VALUE;
+		//尝试每一个end，如果str[i...end]这个部分是回文，就去尝试这个部分作为回文的第一块。
+		for (int end = i; end < str.length(); end++) {
+			if(valid(str, i, end)) {
+				//str[i...]拆成： 第一块为str[i..end]  后续的str[end+1]怎么拆最省的问题
+				min = Math.min(min, 1+process(str, end+1));
+			}
+		}
+		return min;
+	}
+	private static boolean valid(String str,int L,int R) {
+		while(L<=R) {
+			if(str.charAt(L++)!=str.charAt(R--)) {
+				return false;
+			}
+		}
+		return true;
+	}
 	
 }
