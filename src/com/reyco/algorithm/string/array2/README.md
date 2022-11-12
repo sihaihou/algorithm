@@ -8,5 +8,5 @@
 #### 6,[找出最大的前k个数，要求:使用尽量少的比较次数;](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test6.java)
 #### 7,[给定一个字符串类型的数组arr，返回出现次数最多的前k个数。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test7.java)
 #### 8,[在s字符串中，每个字母都要保留一个，让最后的结果字典序最小，并返回。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test8.java)
-#### 9,[请返回在添加字符最少的情况下，让str整体都是回文字符串的一个结果。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test9.java)
+#### 9,[返回数组arr中的子数组最大异或和。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test9.java)
 #### 10,[给你两个单词 word1 和 word2， 请返回将 word1 转换成 word2 所使用的最少操作数。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test10.java)
