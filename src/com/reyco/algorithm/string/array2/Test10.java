@@ -13,22 +13,22 @@ package com.reyco.lgorithm.string.array2;
  * 答： 第一种情况：dp[i-1][j]   del
  * 			例：
  * 			str1: abcde
- *          str2: abcd
- *          	str1只需要删除e
+ *                      str2: abcd
+ *          		str1只需要删除e
  *    第二种情况：dp[i][j-1]   add 
- *    		例：
- *          str1: abcd————>abcde
- *          str2: abcde
+ *    			例：
+ *         		str1: abcd————>abcde
+ *          		str2: abcde
  *         	 	str1只需要插入e
  *    第三种情况：dp[i-1][j-1] replace
- *   		 例：
- *    		str1: abcdf
- *          str2: abcde
- *          	str1只需要替换f成e
+ *   		 	例：
+ *    			str1: abcdf
+ *          		str2: abcde
+ *          		str1只需要替换f成e
  *    第四种情况：i-1==j-1,dp[i-1][j-1] copy
- *    		 例：
- *    		str1: abcde
- *          str2: abcde
+ *    		 	例：
+ *    			str1: abcde
+ *          		str2: abcde
  * @author reyco
  *
  */
