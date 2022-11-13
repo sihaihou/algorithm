@@ -3,7 +3,11 @@ package com.reyco.algorithm.string.array2;
 /**
  * 65
  * 返回数组arr中的子数组最大异或和。
- * 答：
+ * 答：求arr[start...i] = arr[0...i] ^ arr[0...start-1]
+ *    前缀树放的是arr[0...i-1]的所有异或和，
+ *    不使用前缀树时，当我来的i的时候，我不知道从哪[start]开始能使我的异或和最大，
+ *    这个时候前缀树就知道我应该从哪开始了，从高位往低位和我相反的时候能使异或和最大，
+ *    	比如：0110，我最想要的是1001，能使异或和最大：0110^1001=1111
  * @author reyco
  *
  */
@@ -81,6 +85,7 @@ public class Test9 {
 		if(arr==null || arr.length==0) {
 			return 0;
 		}
+		//pre0ToIEor[i]表示arr[0...i]的异或和
 		int[] pre0ToIEor = new int[arr.length];
 		pre0ToIEor[0] = arr[0];
 		for (int i = 1; i < arr.length; i++) {
