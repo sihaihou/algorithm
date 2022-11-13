@@ -7,7 +7,7 @@ package com.reyco.algorithm.string.array2;
  *    1)字符串s=adcbadb从0开始，ad cbadb,保留0位置的a，a前面的都删除掉,a后面的a都删除掉，第一部分a,第二部分dcbdb(递归)，a+?(第二部分递归)
  *    2)继续s=dcbdb从0开始，d cbdb,保留0位置的d，d前面的都删除掉,d后面的d都删除掉，第一部分d,第二部分cbb(递归)，d+?(第二部分递归)
  *    3)继续s=cbb从0开始，c bb,保留0位置的c，c前面的都删除掉,c后面的c都删除掉,第一部分c,第二部分bb(递归)，c+?(第二部分递归)
- *    4)继续s=bb从0开始，b b,保留0位置的b，b前面的都删除掉，b后面的b都删除掉，第一部分b，没有第二部分，结束,答案ans= a+d+c+d
+ *    4)继续s=bb从0开始，b b,保留0位置的b，b前面的都删除掉，b后面的b都删除掉，第一部分b，没有第二部分，结束,答案ans= a+d+c+b
  * @author reyco
  *
  */
