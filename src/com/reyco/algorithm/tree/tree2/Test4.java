@@ -3,6 +3,7 @@ package com.reyco.algorithm.tree.tree2;
 import com.reyco.algorithm.tree.TreeNode;
 
 /**
+ * 50
  * 二叉树每个节点都有一个int类型的权值，从根节点到叶节点的所有路径中，权值和最大的值为多少？
  * @author reyco
  *
