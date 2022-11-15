@@ -1,6 +1,7 @@
 package com.reyco.algorithm.matrix;
 
 /**
+ * 50
  * 给定M×N矩阵，每一行、每一列都按升序排列，请编写代码找出某元素。
  * 答：从右上开始，等于目标值直接返回true，小于目标值往下方走，大于目标向左走，如果越界，则不存在，返回false。
  * @author reyco
