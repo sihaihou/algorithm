@@ -3,6 +3,7 @@ package com.reyco.algorithm.test.test2;
 import java.util.Random;
 
 /**
+ * 49
  * 给定一个函数f，可以等概率返回1~5的数字其中一个，请加工出等概率返回1~7的数字其中一个的函数。
  * 答：先生成等概率返回0和1，在等概率返回1到7: 1~7二进制位3位，先等概念生成0-6,再+1
  * @author reyco
