@@ -1,6 +1,7 @@
 package com.reyco.algorithm.test.test4;
 
 /**
+ * 41
  * 有一片1连接在一起就是一个岛屿，求一个矩阵右多少个岛屿？
  * 可以优化成多线程并行执行
  * @author reyco
