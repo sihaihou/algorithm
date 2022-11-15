@@ -1,28 +1,39 @@
 package com.reyco.algorithm.test.test3;
 
-import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * 52
- * 给定一个正整数数组drinks，drinks[i]代表每个人喝完咖啡准备刷刷杯子的时间。
- * 只有一个咖啡机，一次只能洗一个杯子，时间耗费A,洗完才能洗下一个杯子；
+ * 给定一个正整数数组arr，arr[i]代表一台咖啡机泡一杯咖啡的时间。
+ * 只有一个洗咖啡机，一次只能洗一个杯子，时间耗费A,洗完才能洗下一个杯子；
  * 每个杯子也可以自己挥发干净，时间耗费B,咖啡被可以并行挥发。
- * 返回让所有咖啡被变干净的最早完成时间？
+ * 现在有n个人泡咖啡，返回让所有咖啡被变干净的最早完成时间？
  * @author reyco
  *
  */
 public class Test7 {
 	public static void main(String[] args) {
-		int[] drinks = RandomArrayFactory.createRandomArray(10, 20);
-		Arrays.sort(drinks);
+		int[] drinks = RandomArrayFactory.createRandomArray(3, 10);
 		RandomArrayFactory.print(drinks);
 		int A = 2;
 		int B = 5;
-		System.out.println(min(drinks, A, B));
-		System.out.println(min1(drinks, A, B));
+		int n = 10;
+		System.out.println(min(drinks, n, A, B));
+		System.out.println(min1(drinks, n, A, B));
 	}
-	public static int min(int[] drinks,int A,int B) {
-		Arrays.sort(drinks);
+	public static int min(int[] arr,int n,int A,int B) {
+		PriorityQueue<Machine> heap = new PriorityQueue<>(new MachineComparator());
+		for (int i=0;i<arr.length;i++) {
+			heap.add(new Machine(0, arr[i]));
+		}
+		int[] drinks = new int[n];
+		for(int i=0;i<n;i++) {
+			Machine curr = heap.poll();
+			curr.timePonit += curr.workTime;
+			drinks[i] = curr.timePonit;
+			heap.add(curr);
+		}
 		return process(drinks, A, B, 0, 0);
 	}
 	/**
@@ -54,13 +65,25 @@ public class Test7 {
 	}
 	/**
 	 * 
-	 * @param drinks
-	 * @param A
-	 * @param B
+	 * @param arr 咖啡机泡咖啡时间
+	 * @param n      人数
+	 * @param A      洗咖啡杯时间
+	 * @param B		  挥发时间
 	 * @return
 	 */
-	public static int min1(int[] drinks,int A,int B) {
-		Arrays.sort(drinks);
+	public static int min1(int[] arr,int n,int A,int B) {
+		PriorityQueue<Machine> heap = new PriorityQueue<>(new MachineComparator());
+		for (int i=0;i<arr.length;i++) {
+			heap.add(new Machine(0, arr[i]));
+		}
+		int[] drinks = new int[n];
+		for(int i=0;i<n;i++) {
+			Machine curr = heap.poll();
+			curr.timePonit += curr.workTime;
+			drinks[i] = curr.timePonit;
+			heap.add(curr);
+		}
+		//
 		int N = drinks.length;
 		if(A>=B) {
 			return drinks[N-1]+B;
@@ -94,5 +117,27 @@ public class Test7 {
 			}
 		}
 		return dp[0][0];
+	}
+	/**
+	 * 泡咖啡机
+	 * @author reyco
+	 *
+	 */
+	public static class Machine{
+		//当前时间点
+		public int timePonit;
+		//泡咖啡时间
+		public int workTime;
+		public Machine(int timePonit, int workTime) {
+			super();
+			this.timePonit = timePonit;
+			this.workTime = workTime;
+		}
+	}
+	public static class MachineComparator implements Comparator<Machine>{
+		@Override
+		public int compare(Machine o1, Machine o2) {
+			return (o1.timePonit+o1.workTime)-(o2.timePonit+o2.workTime);
+		}
 	}
 }
