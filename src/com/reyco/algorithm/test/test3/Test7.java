@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * 52
+ * 52--还有一个
  * 给定一个正整数数组arr，arr[i]代表一台咖啡机泡一杯咖啡的时间。
  * 只有一个洗咖啡机，一次只能洗一个杯子，时间耗费A,洗完才能洗下一个杯子；
  * 每个杯子也可以自己挥发干净，时间耗费B,咖啡被可以并行挥发。
