@@ -1,7 +1,7 @@
 package com.reyco.lgorithm.kpm;
 
 /**
- * 42
+ * 41
  * KMP
  * 字符串str1和str2，str1是否包含str2，如果包含，返回str2在str1中开始的位置.否则返回-1
  * @author reyco
