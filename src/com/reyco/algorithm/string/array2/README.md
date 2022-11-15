@@ -1,6 +1,6 @@
 ## 最长子串、子数组问题： 以i结尾怎么怎么样？
 
-#### 1,[返回子数组的最大累加和。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test1.java)
+#### 1,[返回子数组的最大累加和。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test1.java)[(子矩阵的最大累加和)](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/matrix/Test9.java)
 #### 2,[返回累加和等于sum的子数组有多少个?](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test2.java)
 #### 3,[字符串全排列](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test3.java)
 #### 4,[全部子序列](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string/array2/Test4.java)
