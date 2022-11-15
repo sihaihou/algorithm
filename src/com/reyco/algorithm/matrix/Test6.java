@@ -1,6 +1,7 @@
 package com.reyco.algorithm.matrix;
 
 /**
+ * 51
  * 矩阵用zigzag的方法打印矩阵，如：
  *  {
  * 		{0,  1,  2,  3}
