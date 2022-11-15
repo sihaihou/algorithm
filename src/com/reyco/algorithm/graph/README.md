@@ -45,3 +45,4 @@
 #### 6，[dijkstra算法](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test6.java)---求单元最小路径
 #### 7，[dijkstra优化算法](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test7.java)----小根堆改进后的dijkstra算法
 #### 8，[请返回长度为N的boolean型数组res，res[i]代表第i个加油站是不是良好出发点.](https://github.com/sihaihou/algorithm/blob/master/src/com/reyco/algorithm/graph/Test8.java)
+#### 9，运营活动matrix,matrix[i][0]表示活动时长，matrix[i][1]表示活动奖励。给出有限的时间，能获得的最大奖励是多少，以及需要的最少时长。  56
