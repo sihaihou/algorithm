@@ -7,5 +7,5 @@
 #### 6,[在难度不超过自身能力的情况下，返回所有小伙伴获得的最高劳动报酬](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test/test1/Test6.java)
 #### 7,[给你一个数，返回以中文方式输出。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test/test1/Test7.java)
 #### 8,[()()()的深度是1，((()))的深度是3。给你一个合法的括号序列，计数深度？](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test/test1/Test8.java)
-#### 9,[一个字符串只包含左括号和右括号，求最长的有效括号。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test/test1/Test9.java)
+#### 9,[()()()一个字符串只包含左括号和右括号，求最长的有效括号。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test/test1/Test9.java)
 #### 10，()()()一个字符串只包含左括号和右括号，至少添加多少个字符，使整体是一个完整的括号序列。48
