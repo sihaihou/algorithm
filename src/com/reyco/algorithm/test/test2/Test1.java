@@ -3,6 +3,7 @@ package com.reyco.algorithm.test.test2;
 /**
  * 给定一个有序数组arr，代表数轴上从左到右右n个点arr[0]、arr[1]...arr[n-1],
  * 给定一个整数L，代表一根长度为L的绳子，求绳子最多能覆盖其中的几个点.
+ * 答： 以arr[left]开始的最多能覆盖几个点,当right不能再往右移动了，就计算长度，left右移一格，继续看right最多能覆盖几个点；中间出现的最大值就是结果。
  * @author reyco
  *
  */
