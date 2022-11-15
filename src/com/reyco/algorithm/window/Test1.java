@@ -3,6 +3,7 @@ package com.reyco.algorithm.window;
 import java.util.LinkedList;
 
 /**
+ * 42
  * 有一个整数的数组arr和一个大小为w的窗口从数组的最左端滑动到最右端，窗口每次向右滑动一个位置。
  * 求每种窗口状态下窗口中的最大值，并以最大值的数组
  * <pre>
