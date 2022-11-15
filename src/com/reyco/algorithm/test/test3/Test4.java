@@ -1,6 +1,7 @@
 package com.reyco.algorithm.test.test3;
 
 /**
+ * 49
  * 小明去商店买苹果，只能买6或8个每袋,每个袋子不能拆分，求小明买n个苹果，最少需要几个袋子，如果搞不定，返回-1.
  * @author reyco
  *
