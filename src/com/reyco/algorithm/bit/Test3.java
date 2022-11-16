@@ -39,7 +39,7 @@ public class Test3 {
 		while(pos!=0) {
 			mostRightOne = pos & (~pos+1);
 			System.out.println(pos+"最右的1:"+mostRightOne);
-			pos = pos - mostRightOne;
+			pos ^= mostRightOne;
 		}
 	}
 	/**
