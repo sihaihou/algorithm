@@ -1,7 +1,7 @@
 package com.reyco.algorithm.test.test3;
 
 /**
- * 39
+ * 38-39
  * N皇后问题
  * @author reyco
  *
