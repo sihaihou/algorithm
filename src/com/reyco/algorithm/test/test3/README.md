@@ -10,4 +10,4 @@
 #### 8，[戳气球](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test/test3/Test8.java)
 #### 9，[返回express有多少种组合方式，可以达到desired的结果。](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test/test3/Test9.java)
 #### 10，[剪贴纸问题](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test/test3/Test10.java)
-#### 11，[完美洗牌问题](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test/test3/Test12.java)
+#### 11，[完美洗牌问题](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test/test3/Test11.java)
