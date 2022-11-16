@@ -1,4 +1,4 @@
-# 所有的测试题型
+# 算法题型
 #### 1，union: [并查集](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/Union)
 #### 2，trie: [前缀树](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/trie)
 #### 3，window：[滑动窗口](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/window)
