@@ -1,7 +1,7 @@
 package com.reyco.algorithm.test.test3;
 
 /**
- * 65
+ * 39-65
  * N层汉诺塔移动次数：(n^2)-1
  * 
  * 汉诺塔问题：
