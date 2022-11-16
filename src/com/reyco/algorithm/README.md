@@ -15,5 +15,6 @@
 #### 14，orderedTable: [有序表](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/orderedTable)
 #### 15，string: [字符串+数组](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/string)
 #### 16，test: [业务题](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/test)manacher
-#### 17，test: [业务题](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/kmp)
-#### 18，test: [业务题](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/manacher)
+#### 17，test: [kmp](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/kmp)
+#### 18，test: [manacher](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/manacher)
+#### 19，test: [stack](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/stack)
