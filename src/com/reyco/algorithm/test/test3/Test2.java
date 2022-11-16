@@ -76,7 +76,7 @@ public class Test2 {
 		int mostRightOne = 0;
 		while(pos!=0) {
 			mostRightOne = pos & (~pos+1);
-			pos = pos - mostRightOne;
+			pos ^= mostRightOne;
 			ans += process1(limit, colLim|mostRightOne, (leftLim|mostRightOne)<<1, (rightLim|mostRightOne)>>>1);
 		}
 		return ans;
