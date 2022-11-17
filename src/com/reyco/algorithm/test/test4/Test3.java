@@ -5,6 +5,8 @@ import java.util.Stack;
 /**
  * 39
  * 反转栈--逆序栈
+ * 答： 第一步：f函数,移除栈底元素并返回。
+ *    第二步：递归调用f函数，把i压回栈中
  * @author reyco
  *
  */
@@ -35,7 +37,11 @@ public class Test3 {
 		reverse(stack);
 		stack.push(i);
 	}
-	
+	/**
+	 * 移除栈底元素并返回
+	 * @param stack
+	 * @return
+	 */
 	public static int f(Stack<Integer> stack) {
 		int result = stack.pop();
 		if(stack.isEmpty()) {
