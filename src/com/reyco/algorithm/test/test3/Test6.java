@@ -6,6 +6,7 @@ package com.reyco.algorithm.test.test3;
  * 给定一个正数bag,表示一个载重bag的袋子，
  * 你装的物品不能超过这个重量。
  * 返回你能装下最多的价值是多少？
+ * 答: 每一个位置的货物要或者不要，求最大值。
  * @author reyco
  *
  */
