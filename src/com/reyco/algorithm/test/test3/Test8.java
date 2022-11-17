@@ -61,6 +61,9 @@ public class Test8 {
 				nums[L-1]*nums[R]*nums[R+1]+process(nums, L, R-1));//最后打爆R
 		//尝试中间位置的气球被打爆的每一种方案。
 		for (int i = L+1; i < R; i++) {
+			// nums[L-1]*nums[i]*nums[R+1]: 中间
+			// process(nums, L, i-1)前一部分  
+			// process(nums, i+1, R)后一部分
 			max = Math.max(max, nums[L-1]*nums[i]*nums[R+1]+process(nums, L, i-1)+process(nums, i+1, R));
 		}
 		return max;
