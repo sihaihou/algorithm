@@ -55,7 +55,7 @@ public class Test10 {
 		int ans = Integer.MAX_VALUE;
 		for(int i=0;i<stickerMatrix.length;i++) {
 			// 枚举每一张贴
-			//贴纸必须包含rest中的字符，不然程序跑不完了
+			//贴纸i中必须包含rest中的字符，不然程序跑不完了
 			if(stickerMatrix[i][rest.charAt(0)-'a']==0) {
 				continue;
 			}
