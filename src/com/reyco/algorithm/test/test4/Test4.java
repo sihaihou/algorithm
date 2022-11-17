@@ -21,7 +21,7 @@ public class Test4 {
 		int ans = Integer.MIN_VALUE;
 		for (int x = 0; x < matrix.length; x++) {
 			for (int y = 0; y < matrix[0].length; y++) {
-				Info curr = process(matrix, x, y);
+				Info curr = process(matrix, x, 0);
 				ans = Math.max(ans, Math.max(curr.no, curr.yes));
 			}
 		}
