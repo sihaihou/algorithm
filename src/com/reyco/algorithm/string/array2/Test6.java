@@ -40,25 +40,31 @@ public class Test6 {
 		int[] shorts = A.length<B.length ? A : B;
 		int L = longs.length;
 		int S = shorts.length;
+		//第一种情况，K小于短数组的长度
 		if(K<=S) {
 			return getUpMedian(shorts,0,K-1,longs,0,K-1);
 		}
+		//第三种情况,K大于长数组的长度
 		if(K>L) {
+			//排查：手动验A中第6个是否大于长数组最后一个
 			if(shorts[K-L-1]>=longs[L-1]) {
 				return shorts[K-L-1];
 			}
+			//排查：手动验B中第13'个是否大于短数组最后一个
 			if(longs[K-S-1]>=shorts[S-1]) {
 				return longs[K-S-1];
 			}
+			//
 			return getUpMedian(shorts, K-L, S-1, longs, K-S, L-1);
 		}
+		//第二种情况：K大于短数组长度，小于长数组长度
 		if(longs[K-S-1]>=shorts[S-1]) {
 			return longs[K-S-1];
 		}
 		return getUpMedian(shorts, 0, S-1, longs, K-S, K-L);
 	}
 	/**
-	 * 求上中位数
+	 * 求上中位数：e1-s1 = e2-s2
 	 * @param a1
 	 * @param s1
 	 * @param e1
