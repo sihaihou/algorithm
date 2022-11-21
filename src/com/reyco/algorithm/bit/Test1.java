@@ -43,7 +43,7 @@ public class Test1 {
 		return add(~n,1);
 	}
 	/**
-     * 乘法---小写乘法
+     * 乘法---小学乘法
      * @param a
      * @param b
      * @return
