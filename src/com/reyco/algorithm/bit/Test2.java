@@ -7,18 +7,36 @@ package com.reyco.algorithm.bit;
  */
 public class Test2 {
 	public static void main(String[] args) {
-		int hammingWeight = hammingWeight(11);
-		System.out.println(hammingWeight);
+		for(int i=0;i<100000;i++){
+			int result = hammingWeight(i);
+			int result2 = hammingWeight1(i);
+			if(result!=result2) {
+				System.out.println("fail");
+				System.out.println("i:"+j+",result:"+result);
+				System.out.println("i:"+j+",result2:"+result2);
+				return;
+			}
+		}
+		System.out.println("success");
 	}
-	public static int hammingWeight(int n) {
-        int times = 0;
-        int i = 0;
-        while(i<32) {
-        	if((n&(1<<i))!=0) {
-        		times++;
+	public static int hammingWeight1(int n) {
+        	int times = 0;
+        	int i = 0;
+       		while(i<32) {
+        		if((n&(1<<i))!=0) {
+        			times++;
+        		}
+        		i++;
         	}
-        	i++;
-        }
-        return times;
-    }
+        	return times;
+    	}
+	public static int hammingWeight(int n) {
+		int times = 0;
+		while(n!=0) {
+			int temp = n & (~n+1);
+			n ^=temp;
+			times++;
+		}
+		return times;
+	}
 }
