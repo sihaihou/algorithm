@@ -19,6 +19,9 @@ public class Test2 {
 		}
 		System.out.println("success");
 	}
+	/**
+	 * 效率高
+	 */
 	public static int hammingWeight1(int n) {
         	int times = 0;
         	int i = 0;
@@ -30,6 +33,9 @@ public class Test2 {
         	}
         	return times;
     	}
+	/**
+	 * 效率低
+	 */
 	public static int hammingWeight(int n) {
 		int times = 0;
 		while(n!=0) {
