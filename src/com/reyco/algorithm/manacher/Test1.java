@@ -18,10 +18,10 @@ public class Test1 {
 		}
 		char[] sChar = manacherString(s);//#a#b#c#d#e#f#g#
 		int[] cache = new int[s.length()];
-		//最长回文右边界的中心点的位置
-		int C = -1;
 		//最长回文右边界
 		int R = -1;
+		//最长回文右边界的中心点的位置，随着R的变化而变化，如果R不变,C也不变。
+		int C = -1;
 		int max = Integer.MIN_VALUE;
 		for(int i=0;i!=s.length();i++) {
 			cache[i] = R > i ? Math.min(cache[2*C-i], R-i) : 1;
