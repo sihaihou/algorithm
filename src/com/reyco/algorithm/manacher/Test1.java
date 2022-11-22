@@ -18,7 +18,9 @@ public class Test1 {
 		}
 		char[] sChar = manacherString(s);//#a#b#c#d#e#f#g#
 		int[] cache = new int[s.length()];
+		//最长回文右边界的中心点的位置
 		int C = -1;
+		//最长回文右边界
 		int R = -1;
 		int max = Integer.MIN_VALUE;
 		for(int i=0;i!=s.length();i++) {
