@@ -15,6 +15,7 @@ public class Test1 {
 	}
 
 	/**
+	 * 两数相加 = 无进位相交(^) + 进位信息(&<<1)
 	 * 加法 先异或，再与运算后左移一位,拿到异或结果和与运算结果继续异或、与运算，直到位运算等于0时结束
 	 * 
 	 * @param a
@@ -39,11 +40,16 @@ public class Test1 {
 	public static int subtract(int a, int b){
 		return add(a, negtive(b));
 	}
+	/**
+	 * 求相反数：取反+1
+	 * @param n
+	 * @return
+	 */
 	private static int negtive(int n){
 		return add(~n,1);
 	}
 	/**
-     * 乘法---小学乘法
+     * 乘法---小写乘法
      * @param a
      * @param b
      * @return
