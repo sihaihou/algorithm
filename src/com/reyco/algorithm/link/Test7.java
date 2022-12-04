@@ -120,6 +120,9 @@ public class Test7 {
 			curr2 = curr2.next;
 			len--;
 		}
+		if(curr1!=curr2){
+			return null;
+		}
 		curr1 = len > 0 ? head1 : head2;
 		curr2 = curr1==head1 ? head2 : head1;
 		len = Math.abs(len);
