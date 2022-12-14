@@ -8,9 +8,9 @@
 #### &nbsp;&nbsp;&nbsp;&nbsp;希尔排序： 先分组,分组遍历有序；组的大小size=(size-1)/3,组的大小等于1排序后就整体有序了。
 #### &nbsp;&nbsp;&nbsp;&nbsp;归并排序： 两部分有序,变量两边，谁小谁先放入。
 #### &nbsp;&nbsp;&nbsp;&nbsp;快速排序： 先找到一个轴，小于轴的放左边，大于轴的放右边。
-桶排序: [计数排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/CountSort.java)、[基数排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/RadixSort.java)
+### 桶排序: [计数排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/CountSort.java)、[基数排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/RadixSort.java)
 
-[堆排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/HeapSort.java)
+### [堆排序](https://github.com/sihaihou/algorithm/tree/master/src/com/reyco/algorithm/sort/HeapSort.java)
 
 ----------------------------------------------------------------------------------------------
 
