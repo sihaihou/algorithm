@@ -3,6 +3,7 @@ package com.reyco.lgorithm.string.array1;
 /**
  * 55
  * 给你一个整数数组 nums ，找到其中最长严格递增子序列的长度。
+ *   分析: ends[i]有效区内，表示所有长度为i+1的最长递增子序列的最小结尾是多少？
  * 答： 方法1： N^2的方法： 生成dp数组，dp[i]表示以arr[i]结尾最长递增子序列长度是多少？
                    生成dp[i]时，在dp[0~i-1]中找到小于等于arr[i]的最大值+1.
                
@@ -20,6 +21,7 @@ public class Test6 {
 		System.out.println(maxLength);
 	}
 	/**
+	 *   分析: ends[i]有效区内，表示所有长度为i+1的最长递增子序列的最小结尾是多少？
 	 * 第一步：数组ends[endIndex]大于nums[i],那么dp[i] = (endIndex+1)+1;
 	 * 		数组ends[endIndex]<=于nums[i],找到大于等于nums[i]的最小索引，dp[i] = 最小索引+1,同时更新ends的最小索引位置的value=nums[i]；
 	 * 第二部：查找dp[i]的最大值
