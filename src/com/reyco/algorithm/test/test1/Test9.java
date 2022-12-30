@@ -3,6 +3,7 @@ package com.reyco.algorithm.test.test1;
 /**
  * 一个字符串只包含左括号和右括号，
  * 求最长的有效括号。
+ * 答：dp[i]必须以i结尾最长有效括号是多少。dp[i]=="(",dp[i]=0,否则dp[i]...
  * @author reyco
  *
  */
