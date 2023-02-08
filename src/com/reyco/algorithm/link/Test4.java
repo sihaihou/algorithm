@@ -13,7 +13,7 @@ public class Test4 {
 		System.out.println("max:"+max+",min:"+min);
 	}
 	/**
-	 * 获取链表长度
+	 * 获取链表最大值
 	 * @param head
 	 * @return
 	 */
@@ -27,7 +27,7 @@ public class Test4 {
 		return max;
 	}
 	/**
-	 * 获取链表长度
+	 * 获取链表最小值
 	 * @param head
 	 * @return
 	 */
