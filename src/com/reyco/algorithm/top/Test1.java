@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Random;
 
 /**
+ * 中-4
  * 排行榜记录---前k条记录
  * TopRecord
  * 答：词频组织的小根堆：堆顶是门槛，只要出现的词频大于堆顶的词频，就把堆顶的替换掉并调整小根堆
