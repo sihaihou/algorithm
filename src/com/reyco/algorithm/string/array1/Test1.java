@@ -4,7 +4,8 @@ package com.reyco.algorithm.string.array1;
  * 62
  * 给定两个字符串str1、str2,求str1和str2的最长公共子串。
  * 答: str1必须以i结尾,str2必须以j结尾情况下，最长公共子串有多长。它只依赖左上角的值+1, dp[i-1][j-1]+1
- * 		str1[i]==str2[j]，len=dp[i-1][j-1]+1;str1[i]!=str2[j],len=0。
+ *            如果:str1[i]==str2[j]，len=dp[i-1][j-1]+1;
+ *            如果:str1[i]!=str2[j],len=0
  * @author reyco
  *
  */
