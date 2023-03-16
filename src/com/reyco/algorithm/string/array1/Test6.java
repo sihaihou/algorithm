@@ -8,7 +8,8 @@ package com.reyco.lgorithm.string.array1;
                    生成dp[i]时，在dp[0~i-1]中找到小于等于arr[i]的最大值+1.
                
        方法2:  ends[i]表示长度为i+1的最长子序列的最小结尾是多少？
-              在ends有效区中二分查找大于nums[i]最左的位置，更新ends这个位置上的数;dp[i]等于ends这个位置上的数+1；
+              在ends有效区中二分查找大于nums[i]最左的位置，更新ends这个位置上的数;dp[i]等于在ends数组中连通自己有几个数；
+	      如果没有找到大于nums[i]的数，就扩充有效区，dp[i]等于在ends数组中连通自己有几个数；
 	      
              第一步：数组ends[endIndex]大于nums[i],那么dp[i] = (endIndex+1)+1;
  *	 	    数组ends[endIndex]<=于nums[i],找到大于等于nums[i]的最小索引，dp[i] = 最小索引+1,同时更新ends的最小索引位置的value=nums[i]；
