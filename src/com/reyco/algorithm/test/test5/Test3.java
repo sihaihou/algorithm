@@ -10,14 +10,14 @@ package com.reyco.algorithm.test.test5;
  */
 public class Test3 {
 	public static void main(String[] args) {
-		String str = "1123";
-		int changeNum = getChangeNum(str);
+		String str = "1323212123";
+		int changeNum = getChangeNum1(str);
 		System.out.println(changeNum);
-		int changeNum1 = getChangeNum1(str);
+		int changeNum1 = getChangeNum2(str);
 		System.out.println(changeNum1);
 	}
-	public static int getChangeNum(String str) {
-		return process(str, 0);
+	public static int getChangeNum1(String str) {
+		return process1(str, 0);
 	}
 	/**
 	 * 
@@ -25,53 +25,58 @@ public class Test3 {
 	 * @param index
 	 * @return
 	 */
-	public static int process(String str,int index) {
+	public static int process1(String str,int index) {
 		if(index==str.length()) {
 			return 1;
 		}
 		if(str.charAt(index)=='0') {
 			return 0;
 		}
-		int res = process(str, index+1);
 		if(str.charAt(index)=='1') {
+			int res = process1(str, index+1);
 			if(index+1<str.length()) {
-				res += process(str, index+2);
+				res += process1(str, index+2);
 			}
+			return res;
 		}
 		if(str.charAt(index)=='2') {
+			int res = process1(str, index+1);
 			if(index+1<str.length() && str.charAt(index+1)>='0' && str.charAt(index+1)<='6') {
-				res += process(str, index+2);
+				res += process1(str, index+2);
 			}
+			return res;
 		}
-		return res;
+		//3<=str[index]<=9
+		return process1(str, index+1);
 	}
 	/**
 	 * 动态规划
 	 * @param str
 	 * @return
 	 */
-	public static int getChangeNum1(String str) {
+	public static int getChangeNum2(String str) {
 		int[] dp = new int[str.length()+1];
 		dp[str.length()] = 1;
 		for(int index=str.length()-1;index>=0;index--) {
 			if(str.charAt(index)=='0') {
 				dp[index]=0;
 			}
-			dp[index] = dp[index+1];
 			if(str.charAt(index)=='1') {
+				dp[index] = dp[index+1];
 				if(index+1<str.length()) {
 					dp[index] += dp[index+2];
 				}
 			}
 			if(str.charAt(index)=='2') {
+				dp[index] = dp[index+1];
 				if(index+1<str.length() && str.charAt(index+1)>='0' && str.charAt(index+1)<='6') {
 					dp[index] += dp[index+2];
 				}
 			}
-
+			if(str.charAt(index)>='3' && str.charAt(index)<='9') {
+				dp[index] = dp[index+1];
+			}
 		}
-		return process(str, 0);
+		return dp[0];
 	}
-
-	
 }
