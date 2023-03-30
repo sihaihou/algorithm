@@ -3,6 +3,7 @@ package com.reyco.lgorithm.string.array2;
 import java.util.HashMap;
 import java.util.Map;
 /**
+ * 28
  * 给定一个数组arr，和正数sum;
  * 返回累加和等于sum的子数组有多少个?
  * @author reyco
