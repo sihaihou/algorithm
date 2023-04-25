@@ -25,13 +25,13 @@ public class Test1 {
 		hanota(3, "left", "right", "mid");
 	}
 	
-	public static void hanota(int n,String from,String to,String other) {
-		if(n==1) {
-			System.out.println("n:"+n+",from:"+from+"——>to："+to);
+	public static void hanota(int i,String from,String to,String other) {
+		if(i==1) {
+			System.out.println("i:"+i+",from:"+from+"——>to："+to);
 		}else {
-			hanota(n-1, from, other, to);
-			System.out.println("n:"+n+",from:"+from+"——>to："+to);
-			hanota(n-1, other, to, from);
+			hanota(i-1, from, other, to);
+			System.out.println("i:"+i+",from:"+from+"——>to："+to);
+			hanota(i-1, other, to, from);
 		}
 	}
 }
