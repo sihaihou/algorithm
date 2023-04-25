@@ -13,9 +13,9 @@ package com.reyco.algorithm.test.test3;
  * 请编写程序，用栈将所有盘子从第一根柱子移到最后一根柱子。
  * 你需要原地修改栈。
  *
- * 答：第一步：把1~N-1移动到other； 
- *    第二步：把第N移动到to；
- *    第三步：把第1~N-1移动到to；
+ * 答：第一步：把1~i-1先从from移动到other； 
+ *    第二步：再把i从from移动到to；
+ *    第三步：最后把第1~i-1从othor移动到to；
  * @author reyco
  *
  */
