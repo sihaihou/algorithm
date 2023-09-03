@@ -6,6 +6,9 @@ import com.reyco.algorithm.tree.TreeNode;
 
 /**
  * 二叉树的前中后遍历
+ *  先序：头左右
+ *  中序：左头右
+ *  后序：左右头
  * @author reyco
  *
  */
