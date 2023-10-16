@@ -17,6 +17,27 @@ package com.reyco.algorithm.string.array1;
  */
 public class Test8 {
 	public static void main(String[] args) {
-		
+		String s = "abcc";
+		int length = longestPalindrome(s);
+		System.out.println(length);	
+	}
+	public static int longestPalindrome(String s) {
+		int length = s.length();
+		int[][] dp = new int[length][length];
+		for (int i = 0; i < length; i++) {
+			dp[i][i] = 1;
+		}
+		int max = 1;
+		for (int i = length - 2; i >= 0; i--) {
+			for (int j = i + 1; j < length; j++) {
+				dp[i][j] = Math.max(dp[i][j - 1], dp[i + 1][j]);
+				dp[i][j] = Math.max(dp[i][j], dp[i + 1][j - 1]);
+				if (s.charAt(i) == s.charAt(j)) {
+					dp[i][j] = Math.max(dp[i][j], dp[i + 1][j - 1] + 2);
+				}
+				max = Math.max(max, dp[i][j]);
+			}
+		}
+		return max;
 	}
 }
