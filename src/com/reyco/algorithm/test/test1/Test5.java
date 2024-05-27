@@ -11,7 +11,8 @@ import java.util.Stack;
 public class Test5 {
 	
 	public static void main(String[] args) {
-		String str= "33+((12*9+42/2)+2/3)";
+		//String str= "33+((12*9+42/2)+6/3)";
+		String str= "22-19-18";
 		int resulut = getValue(str);
 		System.out.println(resulut);
 	}
@@ -19,30 +20,36 @@ public class Test5 {
 		return value(str, 0).sum;
 	}
 	public static Response value(String str,int i) {
-		Stack<Object> stack = new Stack<>();
+		LinkedList<String> linkedList = new LinkedList<String>();
 		int num = 0;
-		char ati,peek;
+		char ati;
 		while(i<str.length() && (ati=str.charAt(i++))!=')') {
 			if(ati>='0' && ati<='9') {
 				num = num*10 + ati-'0';
 			}else if(ati != '(') {
-				if(!stack.isEmpty() && ((peek = (Character) stack.peek())=='*' || peek=='/')) {
-					Character pop1 = (Character) stack.pop();
-					int pop2 = (int) stack.pop();
-					stack.push(pop1=='*' ? pop2*num : pop2/num);
-				}else {
-					stack.push(num);
-				}
-				num =0;
-				stack.push(ati);
+				addNum(linkedList, num);
+				num = 0;
+				linkedList.addLast(String.valueOf(ati));
 			}else {
 				Response response = value(str, i);
 				num = response.sum;
 				i = response.index;
 			}
 		}
-		int sum = addSum(stack, num);
-		return new Response(sum,i);
+		addNum(linkedList, num);
+		return new Response(getSum(linkedList),i);
+	}
+	private static void addNum(LinkedList<String> linkedList,int num) {
+		if(!linkedList.isEmpty()) {
+			String symbol = linkedList.pollLast();
+			if(symbol.equals("+") || symbol.equals("-")) {
+				linkedList.addLast(symbol);
+			}else {
+				int left = Integer.valueOf(linkedList.pollLast());
+				num = symbol.equals("*") ? (left*num) : (left/num);
+			}
+		}
+		linkedList.addLast(String.valueOf(num));
 	}
 	/**
 	 * 求和
@@ -50,28 +57,20 @@ public class Test5 {
 	 * @param num
 	 * @return
 	 */
-	public static int addSum(Stack<Object> stack,int num) {
-		int sum=num;
-		String symbol = "";
-		while(!stack.isEmpty()) {
-			Object pop = stack.pop();
-			String temp = pop.toString();
-			if(temp.equalsIgnoreCase("+") 
-					|| temp.equalsIgnoreCase("-") 
-					|| temp.equalsIgnoreCase("*") 
-					|| temp.equalsIgnoreCase("/")) {
-				symbol = temp;
-			}else{
-				int v = Integer.parseInt(temp);
-				if(symbol.equalsIgnoreCase("+")) {
-					sum += v;
-				}else if(symbol.equalsIgnoreCase("-")) {
-					sum = v-sum;
-				}else if(symbol.equalsIgnoreCase("*")) {
-					sum *= v;
-				}else if(symbol.equalsIgnoreCase("/")) {
-					sum = v / sum;
-				}
+	public static int getSum(LinkedList<String> linkedList) {
+		int sum = 0;
+		boolean add = true;
+		String curr = null;
+		int num = 0;
+		while(!linkedList.isEmpty()) {
+			curr = linkedList.pollFirst();
+			if(curr.equals("+")) {
+				add = true;
+			}else if(curr.equals("-")) {
+				add = false;
+			}else {
+				num = Integer.valueOf(curr);
+				sum += add ? num :(-num);
 			}
 		}
 		return sum;
