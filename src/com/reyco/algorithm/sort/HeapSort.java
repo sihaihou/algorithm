@@ -18,8 +18,11 @@ public class HeapSort {
 		if (arr == null || arr.length < 2) {
 			return;
 		}
-		for (int i = 0; i < arr.length; i++) {
+		/*for (int i = 0; i < arr.length; i++) {
 			heapInsert(arr, i);
+		}*/
+		for(int i=arr.length-1;i>=0;i--) {
+			heapify(arr, i, arr.length);
 		}
 		print(arr);
 		int heapSize = arr.length;
