@@ -5,7 +5,9 @@ package com.reyco.algorithm.string.array1;
  * 数组arr,有正、有负、有零,求数组中所有元素相加和小于或等于k的最长子数组长度。
  *  答： 
  *     第一步：生成minSumArr,minSumArrEnd 例: arr[1,2,5,-4,3,-1], minSumArr[1,2,1,-4,2,-1], minSumArrEnd[0,1,3,3,5,5]  
- *	          minSumArr[i]表示从i出发到右的所有情况中，能得到的最小累加和。
+ *	          minSumArr[i]表示必须从i出发到右的所有情况中，能得到的最小累加和是多少？
+ *                minSumArrEnd[i]表示必须从i出发到右的所有情况中，最小累加和的右边界是多少？
+
  *     第二步：      
  * @author reyco
  *
