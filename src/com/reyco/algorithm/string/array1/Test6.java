@@ -14,6 +14,8 @@ package com.reyco.lgorithm.string.array1;
              第一步：数组ends[endIndex]大于nums[i],那么dp[i] = (endIndex+1)+1;
  *	 	    数组ends[endIndex]<=于nums[i],找到大于等于nums[i]的最小索引，dp[i] = 最小索引+1,同时更新ends的最小索引位置的value=nums[i]；
  *	     第二部：查找dp[i]的最大值
+ *     方法2(用TreeMap替换ends数组): map.key最小结尾的值，value是最小结尾的长度，
+ 		TreeMap中找大于nums[i]的key，如果没有添加到TreeMap中，value等于TreeMap的大小加1；如果有先移除，在添加，value等于老的值，dp[i]的值等于当前TreeMap的大小。
  * @author reyco
  *
  */
