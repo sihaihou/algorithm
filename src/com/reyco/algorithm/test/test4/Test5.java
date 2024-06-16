@@ -37,6 +37,11 @@ public class Test5 {
 		return sum+1;
 	}
 	
+	/**
+	 * 长度为len的数量有多少个？
+	 * @param len
+	 * @return
+	 */
 	private static int f(int len) {
 		int sum = 0;
 		for (int i = 1; i <= 26; i++) {
@@ -44,7 +49,12 @@ public class Test5 {
 		}
 		return sum;
 	}
-	
+	/**
+	 * 以i开头，长度为len的数量有多少个？
+	 * @param i
+	 * @param len
+	 * @return
+	 */
 	private static int g(int i,int len) {
 		int sum = 0;
 		if(len==1) {
