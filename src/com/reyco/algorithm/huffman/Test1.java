@@ -13,6 +13,13 @@ import java.util.PriorityQueue;
  */
 public class Test1 {
 	public static void main(String[] args) {
+		/**3+6+9+12+15+18+27+45
+		 * = 18+12+15+18+27+45
+		 * = 30+33+27+45
+		 * = 30+60+45
+		 * = 90+45
+		 * = 135
+		 */
 		int[] arr = {1,2,3,4,5,6,7,8,9};
 		int minMoney = minMoney(arr);
 		System.out.println(minMoney);
@@ -33,7 +40,7 @@ public class Test1 {
 	public static class MinHeapComparator implements Comparator<Integer>{
 		@Override
 		public int compare(Integer o1, Integer o2) {
-			return 01-o2;
+			return o1-o2;
 		}
 	}
 }
